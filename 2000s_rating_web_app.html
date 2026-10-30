@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★~ 2000s RATING ~★ | Tu Catálogo Retro de Películas (1990-2013)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Y2K & Retro Styles */
+        :root {
+            --pink-hot: #FF007F;
+            --pink-soft: #FF66B2;
+            --purple-neon: #8A2BE2;
+            --purple-deep: #120024;
+            --cyan-bright: #00FFFF;
+            --cyan-glow: #00BFFF;
+            --silver-metal: #C0C0C0;
+            --dark-bg: #0A0A1A;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 0, 127, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+                linear-gradient(rgba(18, 0, 36, 0.95), rgba(10, 10, 26, 0.98)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect width="40" height="40" fill="none"/><circle cx="20" cy="20" r="1" fill="%23ff007f" opacity="0.3"/></svg>');
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #120024;
+            border-left: 2px solid #FF007F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FF007F, #8A2BE2, #00FFFF);
+            border: 2px solid #FFFFFF;
+            border-radius: 4px;
+        }
+
+        .y2k-font-title {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .y2k-font-digital {
+            font-family: 'VT323', monospace;
+        }
+
+        /* Y2K Retro Box & Borders */
+        .y2k-box {
+            background: linear-gradient(135deg, rgba(255, 0, 127, 0.15), rgba(0, 255, 255, 0.1));
+            backdrop-filter: blur(8px);
+            border: 3px solid #C0C0C0;
+            border-style: outset;
+            box-shadow: 
+                0 0 15px rgba(255, 0, 127, 0.4),
+                inset 0 0 10px rgba(0, 255, 255, 0.3),
+                5px 5px 0px #000000;
+        }
+
+        .y2k-card {
+            background: rgba(18, 0, 36, 0.85);
+            border: 2px solid #FF66B2;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.3), inset 0 0 15px rgba(138, 43, 226, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .y2k-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: #00FFFF;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), inset 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+
+        /* Buttons */
+        .y2k-btn {
+            background: linear-gradient(180deg, #FF66B2 0%, #FF007F 50%, #9932CC 100%);
+            border: 2px solid #FFFFFF;
+            border-style: outset;
+            color: #FFFFFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+            box-shadow: 3px 3px 0px #000000;
+            transition: all 0.1s ease;
+        }
+        .y2k-btn:active {
+            border-style: inset;
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000000;
+        }
+        .y2k-btn:hover {
+            filter: brightness(1.2);
+            background: linear-gradient(180deg, #00FFFF 0%, #00BFFF 50%, #8A2BE2 100%);
+        }
+
+        .y2k-btn-secondary {
+            background: linear-gradient(180deg, #E0E0E0 0%, #C0C0C0 50%, #808080 100%);
+            border: 2px solid #FFFFFF;
+            color: #000;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        /* Spinning CD Animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spinning-cd {
+            animation: spin 6s linear infinite;
+        }
+        .spinning-cd:hover {
+            animation-duration: 1.5s;
+        }
+
+        /* Glow Effects */
+        .glow-pink {
+            text-shadow: 0 0 8px #FF007F, 0 0 15px #FF66B2;
+        }
+        .glow-cyan {
+            text-shadow: 0 0 8px #00FFFF, 0 0 15px #00BFFF;
+        }
+        .glow-yellow {
+            text-shadow: 0 0 8px #FFD700, 0 0 15px #FFA500;
+        }
+
+        /* Marquee Custom */
+        .marquee-box {
+            background: #000000;
+            border-top: 2px solid #FF007F;
+            border-bottom: 2px solid #00FFFF;
+        }
+
+        /* Sparkle Animation */
+        @keyframes sparkleAnim {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+            100% { transform: scale(0) rotate(360deg); opacity: 0; }
+        }
+        .sparkle-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: sparkleAnim 0.8s forwards ease-out;
+        }
+
+        /* Star Rating Interactive */
+        .star-rating span {
+            cursor: pointer;
+            transition: color 0.2s transform 0.1s;
+        }
+        .star-rating span:hover {
+            transform: scale(1.3);
+        }
+
+        /* Badge Styles */
+        .badge-sentiment-pos {
+            background: rgba(0, 255, 128, 0.2);
+            border: 1px solid #00FF80;
+            color: #00FF80;
+        }
+        .badge-sentiment-neg {
+            background: rgba(255, 50, 50, 0.2);
+            border: 1px solid #FF3232;
+            color: #FF6B6B;
+        }
+        .badge-sentiment-mix {
+            background: rgba(255, 0, 255, 0.2);
+            border: 1px solid #FF00FF;
+            color: #FF80FF;
+        }
+
+        /* Glass Input */
+        .y2k-input {
+            background: rgba(10, 10, 26, 0.9);
+            border: 2px solid #8A2BE2;
+            color: #00FFFF;
+        }
+        .y2k-input:focus {
+            outline: none;
+            border-color: #FF007F;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- TOP RETRO BAR / MARQUEE -->
+    <div class="marquee-box py-1.5 px-4 y2k-font-digital text-lg flex items-center justify-between overflow-hidden">
+        <div class="flex items-center space-x-2 text-pink-400 whitespace-nowrap overflow-x-auto">
+            <span>✨ ¡BIENVENIDO A 2000s RATING! ✨</span>
+            <span>•</span>
+            <span class="text-cyan-300">Las mejores películas de 1990 a 2013</span>
+            <span>•</span>
+            <span class="text-yellow-300">¡Vota, comenta y revive la nostalgia retro! 📼</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-3 text-sm bg-purple-950 px-2 py-0.5 border border-pink-500 rounded">
+            <span>VISITANTE N°:</span>
+            <span id="visitor-counter" class="text-yellow-400 font-bold tracking-widest">0042069</span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="container mx-auto px-4 py-6 text-center relative">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 y2k-box p-6 rounded-xl relative overflow-hidden">
+            <!-- Decorative background sparkles -->
+            <div class="absolute -top-4 -left-4 text-4xl opacity-50 select-none">💖</div>
+            <div class="absolute -bottom-4 -right-4 text-4xl opacity-50 select-none">✨</div>
+
+            <!-- Left CD Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="relative w-16 h-16 flex-shrink-0">
+                    <svg class="spinning-cd w-16 h-16" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="48" fill="url(#cdGradient)" stroke="#FFFFFF" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="18" fill="#120024" stroke="#C0C0C0" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="8" fill="#000000"/>
+                        <defs>
+                            <linearGradient id="cdGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF007F" />
+                                <stop offset="30%" stop-color="#00FFFF" />
+                                <stop offset="70%" stop-color="#8A2BE2" />
+                                <stop offset="100%" stop-color="#FFD700" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="text-left">
+                    <h1 class="text-2xl md:text-4xl y2k-font-title tracking-wider glow-pink text-pink-500">
+                        2000s<span class="text-cyan-300 glow-cyan">RATING</span>
+                    </h1>
+                    <p class="text-xs md:text-sm text-purple-200 y2k-font-digital tracking-widest">
+                        ★ MOVIE REVIEWS & NOSTALGIA ARCHIVE (1990 - 2013) ★
+                    </p>
+                </div>
+            </div>
+
+            <!-- Controls (Sound Synth & Data Reset) -->
+            <div class="flex flex-wrap gap-2 items-center justify-center">
+                <button id="btn-sound" onclick="toggleRetroSound()" class="y2k-btn px-3 py-1.5 text-xs rounded flex items-center gap-1">
+                    <span id="sound-icon">🎵</span> Synth BGM: <span id="sound-status">OFF</span>
+                </button>
+                <button onclick="confirmResetData()" class="y2k-btn-secondary px-3 py-1.5 text-xs rounded hover:bg-red-200">
+                    🔄 Reiniciar Puntuaciones
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- TOP RATED CAROUSEL / FEATURED HIGHLIGHT -->
+    <section class="container mx-auto px-4 mb-8">
+        <div class="y2k-box p-4 rounded-xl border-yellow-400">
+            <div class="flex items-center justify-between mb-3 border-b border-pink-500 pb-2">
+                <h2 class="text-lg md:text-xl y2k-font-title text-yellow-300 glow-yellow flex items-center gap-2">
+                    <span>👑</span> TOP RATED / MÁS POPULARES
+                </h2>
+                <span class="text-xs text-cyan-300 y2k-font-digital">Las favoritas de la comunidad</span>
+            </div>
+            <div id="top-rated-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+                <!-- Dynamically populated top 6 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH & FILTERS TOOLBAR -->
+    <section class="container mx-auto px-4 mb-8">
+        <div class="bg-purple-950/80 border-2 border-cyan-400 p-4 rounded-xl shadow-lg flex flex-col md:flex-row gap-4 justify-between items-center">
+            
+            <!-- Search Bar -->
+            <div class="w-full md:w-1/3 relative">
+                <input type="text" id="search-input" oninput="applyFilters()" placeholder="🔎 Buscar por título o palabras clave..." 
+                       class="w-full y2k-input px-4 py-2 rounded-lg text-sm y2k-font-digital tracking-wide">
+            </div>
+
+            <!-- Filters Group -->
+            <div class="flex flex-wrap gap-2 w-full md:w-auto justify-stretch md:justify-end text-xs">
+                <!-- Genre Filter -->
+                <select id="filter-genre" onchange="applyFilters()" class="y2k-input px-3 py-2 rounded-lg bg-purple-900 text-cyan-200">
+                    <option value="ALL">🎬 Todos los Géneros</option>
+                    <option value="Acción">💥 Acción</option>
+                    <option value="Ciencia Ficción">🚀 Ciencia Ficción</option>
+                    <option value="Comedia">😂 Comedia</option>
+                    <option value="Drama">🎭 Drama</option>
+                    <option value="Romance">💘 Romance</option>
+                    <option value="Animación">🎨 Animación</option>
+                    <option value="Fantasía">🧙‍♂️ Fantasía</option>
+                </select>
+
+                <!-- Era / Year Filter -->
+                <select id="filter-era" onchange="applyFilters()" class="y2k-input px-3 py-2 rounded-lg bg-purple-900 text-cyan-200">
+                    <option value="ALL">📅 Todas las Épocas (1990-2013)</option>
+                    <option value="90s">📼 Década 90s (1990 - 1999)</option>
+                    <option value="2000s">💿 Década 2000s (2000 - 2009)</option>
+                    <option value="2010s">📱 Época 2010-2013</option>
+                </select>
+
+                <!-- Sort Filter -->
+                <select id="sort-by" onchange="applyFilters()" class="y2k-input px-3 py-2 rounded-lg bg-purple-900 text-yellow-300">
+                    <option value="rating">⭐ Mejor Valoradas</option>
+                    <option value="newest">✨ Año (Más Reciente)</option>
+                    <option value="oldest">📜 Año (Más Antigua)</option>
+                    <option value="title">🔤 Título (A - Z)</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN MOVIE CATALOG CATALOG GRID -->
+    <main class="container mx-auto px-4 flex-grow mb-12">
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl md:text-2xl font-bold text-pink-400 glow-pink flex items-center gap-2">
+                <span>📼</span> CATÁLOGO DE PELÍCULAS 
+                <span id="catalog-count" class="text-sm font-normal text-cyan-300 y2k-font-digital">(13)</span>
+            </h2>
+        </div>
+
+        <!-- Movie Grid Container -->
+        <div id="movie-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamically Loaded Movie Cards -->
+        </div>
+
+        <!-- Empty Results Message -->
+        <div id="no-results" class="hidden text-center py-16 y2k-box rounded-xl">
+            <div class="text-5xl mb-3">💔</div>
+            <h3 class="text-xl font-bold text-pink-400 mb-2">¡Ups! No encontramos películas con esos filtros</h3>
+            <p class="text-sm text-cyan-200">Prueba cambiando los criterios de búsqueda o limpia los filtros.</p>
+            <button onclick="resetFilters()" class="mt-4 y2k-btn px-4 py-2 text-sm rounded">Restablecer Filtros</button>
+        </div>
+    </main>
+
+    <!-- MOVIE DETAIL & REVIEWS MODAL -->
+    <div id="review-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="y2k-box bg-purple-950 border-4 border-pink-500 rounded-xl max-w-2xl w-full p-6 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 y2k-btn px-2.5 py-1 text-sm rounded font-bold text-white hover:bg-red-600">
+                ✖ CERRAR
+            </button>
+
+            <!-- Modal Content Loaded via JS -->
+            <div id="modal-content">
+                <!-- Movie details + Interactive Rating + Comments List -->
+            </div>
+        </div>
+    </div>
+
+    <!-- RETRO FOOTER -->
+    <footer class="bg-black border-t-2 border-pink-500 py-8 text-center text-xs text-purple-300 mt-auto">
+        <div class="container mx-auto px-4 flex flex-col items-center gap-3">
+            <div class="flex items-center space-x-2 text-pink-400">
+                <span>💖 Hecho con nostalgia noventera y dosmilera 💖</span>
+            </div>
+            <p class="y2k-font-digital text-sm text-cyan-300">
+                2000s RATING &copy; 1990-2013 ARCHIVE. Todos los derechos reservados.
+            </p>
+            <div class="flex gap-4 text-gray-400">
+                <span>[ HTML5 ]</span>
+                <span>[ CSS3 / TAILWIND ]</span>
+                <span>[ JAVASCRIPT ]</span>
+                <span>[ LOCALSTORAGE SAVED ]</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        /* ==========================================================================
+           1. INITIAL MOVIE DATABASE (1990 - 2013)
+           ========================================================================== */
+        const initialMovies = [
+            {
+                id: "m1",
+                title: "Titanic",
+                year: 1997,
+                genre: "Romance",
+                director: "James Cameron",
+                synopsis: "Un joven artista de clase baja y una chica aristócrata se enamoran a bordo del lujoso e desafortunado RMS Titanic.",
+                poster: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🚢",
+                initialRating: 4.8,
+                votesCount: 120
+            },
+            {
+                id: "m2",
+                title: "The Matrix",
+                year: 1999,
+                genre: "Ciencia Ficción",
+                director: "Lana & Lilly Wachowski",
+                synopsis: "Un programador de computadoras descubre que la realidad es una simulación creada por máquinas y se une a la rebelión.",
+                poster: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🕶️",
+                initialRating: 4.9,
+                votesCount: 154
+            },
+            {
+                id: "m3",
+                title: "Mean Girls (Chicas Pesadas)",
+                year: 2004,
+                genre: "Comedia",
+                director: "Mark Waters",
+                synopsis: "Cady Heron entra a la escuela secundaria pública y sin querer se infiltra en la elite de las chicas más populares: 'Las Plásticas'.",
+                poster: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "💅",
+                initialRating: 4.7,
+                votesCount: 98
+            },
+            {
+                id: "m4",
+                title: "Shrek",
+                year: 2001,
+                genre: "Animación",
+                director: "Andrew Adamson, Vicky Jenson",
+                synopsis: "Un ogro verde ermitaño ve su pantano invadido por criaturas de cuentos de hadas y emprende un viaje para rescatar a una princesa.",
+                poster: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "👹",
+                initialRating: 4.9,
+                votesCount: 210
+            },
+            {
+                id: "m5",
+                title: "The Dark Knight",
+                year: 2008,
+                genre: "Acción",
+                director: "Christopher Nolan",
+                synopsis: "Batman se enfrenta al caos desatado por un criminal demente conocido como el Guasón en la ciudad de Gothan.",
+                poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🦇",
+                initialRating: 5.0,
+                votesCount: 310
+            },
+            {
+                id: "m6",
+                title: "Pulp Fiction",
+                year: 1994,
+                genre: "Drama",
+                director: "Quentin Tarantino",
+                synopsis: "Las vidas de dos matones, la esposa de un gángster y un boxeador se entrelazan en cuatro historias de violencia y redención.",
+                poster: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "📻",
+                initialRating: 4.8,
+                votesCount: 180
+            },
+            {
+                id: "m7",
+                title: "Avatar",
+                year: 2009,
+                genre: "Ciencia Ficción",
+                director: "James Cameron",
+                synopsis: "Un ex-marine parapléjico es enviado a la luna Pandora en una misión única, pero se debate entre seguir órdenes o proteger a su mundo.",
+                poster: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🌿",
+                initialRating: 4.5,
+                votesCount: 140
+            },
+            {
+                id: "m8",
+                title: "Jurassic Park",
+                year: 1993,
+                genre: "Acción",
+                director: "Steven Spielberg",
+                synopsis: "Un multimillonario crea un parque temático de dinosaurios clonados, pero un fallo en la seguridad desata el pánico.",
+                poster: "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🦖",
+                initialRating: 4.9,
+                votesCount: 205
+            },
+            {
+                id: "m9",
+                title: "Harry Potter y la Piedra Filosofal",
+                year: 2001,
+                genre: "Fantasía",
+                director: "Chris Columbus",
+                synopsis: "Un niño huérfano descubre en su cumpleaños número 11 que es un mago y es invitado a estudiar en el Colegio Hogwarts.",
+                poster: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "⚡",
+                initialRating: 4.8,
+                votesCount: 240
+            },
+            {
+                id: "m10",
+                title: "Twilight (Crepúsculo)",
+                year: 2008,
+                genre: "Romance",
+                director: "Catherine Hardwicke",
+                synopsis: "Bella Swan se muda a un pequeño pueblo y se enamora de Edward Cullen, un misterioso compañero de clase que resulta ser un vampiro.",
+                poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🍎",
+                initialRating: 4.2,
+                votesCount: 115
+            },
+            {
+                id: "m11",
+                title: "Spider-Man",
+                year: 2002,
+                genre: "Acción",
+                director: "Sam Raimi",
+                synopsis: "Tras ser mordido por una araña genéticamente modificada, el tímido estudiante Peter Parker adquiere superpoderes.",
+                poster: "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🕷️",
+                initialRating: 4.7,
+                votesCount: 195
+            },
+            {
+                id: "m12",
+                title: "Buscando a Nemo",
+                year: 2003,
+                genre: "Animación",
+                director: "Andrew Stanton",
+                synopsis: "Un pez payaso sobreprotector emprende un viaje a través del océano para encontrar a su hijo capturado.",
+                poster: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🐠",
+                initialRating: 4.8,
+                votesCount: 165
+            },
+            {
+                id: "m13",
+                title: "Inception (El Origen)",
+                year: 2010,
+                genre: "Ciencia Ficción",
+                director: "Christopher Nolan",
+                synopsis: "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños debe implantar una idea en la mente de un CEO.",
+                poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80",
+                svgFallback: "🌀",
+                initialRating: 4.9,
+                votesCount: 230
+            }
+        ];
+
+        // Sample initial user reviews
+        const initialReviews = {
+            "m1": [
+                { id: "r1", user: "CyberCool2000", rating: 5, sentiment: "Positivo 👍", text: "¡Simplemente inolvidable! Lloré en el cine en 1997 y la sigo viendo.", date: "12/04/2004" }
+            ],
+            "m2": [
+                { id: "r2", user: "NeoX_99", rating: 5, sentiment: "Positivo 👍", text: "Los efectos especiales revolucionaron la historia del cine. ¡La pastilla roja siempre!", date: "05/11/2001" }
+            ],
+            "m3": [
+                { id: "r3", user: "PinkPrincesa_04", rating: 5, sentiment: "Positivo 👍", text: "¡Los miércoles nos vestimos de rosa! Icono absoluto de la década.", date: "20/08/2005" }
+            ]
+        };
+
+        /* ==========================================================================
+           2. STATE & LOCALSTORAGE MANAGEMENT
+           ========================================================================== */
+        let moviesData = [];
+        let reviewsData = {};
+        let selectedMovieForModal = null;
+        let selectedStarRatingForm = 5;
+
+        function initData() {
+            // Load Movies State
+            const savedMovies = localStorage.getItem('2000s_rating_movies');
+            if (savedMovies) {
+                moviesData = JSON.parse(savedMovies);
+            } else {
+                moviesData = [...initialMovies];
+                saveMoviesToStorage();
+            }
+
+            // Load Reviews State
+            const savedReviews = localStorage.getItem('2000s_rating_reviews');
+            if (savedReviews) {
+                reviewsData = JSON.parse(savedReviews);
+            } else {
+                reviewsData = { ...initialReviews };
+                saveReviewsToStorage();
+            }
+        }
+
+        function saveMoviesToStorage() {
+            localStorage.setItem('2000s_rating_movies', JSON.stringify(moviesData));
+        }
+
+        function saveReviewsToStorage() {
+            localStorage.setItem('2000s_rating_reviews', JSON.stringify(reviewsData));
+        }
+
+        function confirmResetData() {
+            if (confirm("¿Seguro que deseas reiniciar todas las puntuaciones y comentarios a su estado original retro?")) {
+                localStorage.removeItem('2000s_rating_movies');
+                localStorage.removeItem('2000s_rating_reviews');
+                initData();
+                renderAll();
+                playBeepSound(400);
+            }
+        }
+
+        /* ==========================================================================
+           3. RENDER FUNCTIONS
+           ========================================================================== */
+        function renderAll() {
+            renderTopRated();
+            applyFilters();
+        }
+
+        // Render Top Rated Highlight Carousel
+        function renderTopRated() {
+            const container = document.getElementById('top-rated-container');
+            const sorted = [...moviesData].sort((a, b) => b.initialRating - a.initialRating).slice(0, 6);
+
+            container.innerHTML = sorted.map(movie => `
+                <div onclick="openMovieModal('${movie.id}')" class="y2k-card p-2 rounded-lg cursor-pointer flex flex-col items-center text-center group">
+                    <div class="w-full h-24 rounded overflow-hidden mb-2 relative bg-purple-900 flex items-center justify-center border border-pink-400">
+                        <img src="${movie.poster}" alt="${movie.title}" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" 
+                             onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-3xl\'>${movie.svgFallback}</span>';">
+                        <span class="absolute top-1 right-1 bg-black/80 text-yellow-300 text-[10px] px-1 rounded font-bold border border-yellow-400">
+                            ★ ${movie.initialRating.toFixed(1)}
+                        </span>
+                    </div>
+                    <h3 class="text-xs font-bold text-pink-300 truncate w-full group-hover:text-cyan-300">${movie.title}</h3>
+                    <span class="text-[10px] text-cyan-200 y2k-font-digital">${movie.year}</span>
+                </div>
+            `).join('');
+        }
+
+        // Render Catalog Grid
+        function renderMovieGrid(moviesToDisplay) {
+            const grid = document.getElementById('movie-grid');
+            const noResults = document.getElementById('no-results');
+            document.getElementById('catalog-count').innerText = `(${moviesToDisplay.length})`;
+
+            if (moviesToDisplay.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+
+            grid.innerHTML = moviesToDisplay.map(movie => {
+                const starsHtml = renderStars(movie.initialRating);
+                return `
+                <div class="y2k-card rounded-xl overflow-hidden flex flex-col justify-between p-4 relative">
+                    <!-- Top Badge -->
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="bg-pink-600/80 text-white text-xs px-2 py-0.5 rounded-full font-bold border border-pink-300">
+                            ${movie.genre}
+                        </span>
+                        <span class="bg-cyan-950 text-cyan-300 text-xs px-2 py-0.5 rounded border border-cyan-400 y2k-font-digital">
+                            📅 ${movie.year}
+                        </span>
+                    </div>
+
+                    <!-- Poster & Details -->
+                    <div class="flex gap-4 mb-3">
+                        <div class="w-24 h-36 flex-shrink-0 bg-purple-950 rounded-lg overflow-hidden border-2 border-pink-400 shadow-md flex items-center justify-center relative">
+                            <img src="${movie.poster}" alt="${movie.title}" class="w-full h-full object-cover" 
+                                 onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-4xl flex items-center justify-center h-full bg-purple-900 w-full\'>${movie.svgFallback}</div>';">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <h3 class="text-lg font-bold text-cyan-200 hover:text-pink-300 transition cursor-pointer" onclick="openMovieModal('${movie.id}')">
+                                    ${movie.title}
+                                </h3>
+                                <p class="text-xs text-purple-300 mt-1 line-clamp-3">
+                                    ${movie.synopsis}
+                                </p>
+                            </div>
+                            <!-- Rating Info -->
+                            <div class="mt-2 bg-black/40 p-2 rounded border border-purple-800">
+                                <div class="flex items-center gap-1 text-yellow-300 text-sm">
+                                    ${starsHtml}
+                                    <span class="text-xs font-bold ml-1 text-white">${movie.initialRating.toFixed(1)}</span>
+                                </div>
+                                <div class="text-[11px] text-gray-400 mt-0.5 y2k-font-digital">
+                                    🗳️ ${movie.votesCount} votos registrados
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between pt-2 border-t border-purple-800/80 mt-auto">
+                        <button onclick="openMovieModal('${movie.id}')" class="y2k-btn px-3 py-1.5 text-xs rounded-lg flex items-center gap-1 w-full justify-center">
+                            💬 PUNTUAR Y VER COMENTARIOS
+                        </button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // Helper: Render Star Display
+        function renderStars(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const hasHalf = rating % 1 >= 0.5;
+
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars) {
+                    stars += `<span class="text-yellow-400">★</span>`;
+                } else if (i === fullStars + 1 && hasHalf) {
+                    stars += `<span class="text-yellow-300">★</span>`;
+                } else {
+                    stars += `<span class="text-gray-600">☆</span>`;
+                }
+            }
+            return stars;
+        }
+
+        /* ==========================================================================
+           4. SEARCH, FILTER & SORT LOGIC
+           ========================================================================== */
+        function applyFilters() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            const genreFilter = document.getElementById('filter-genre').value;
+            const eraFilter = document.getElementById('filter-era').value;
+            const sortBy = document.getElementById('sort-by').value;
+
+            let filtered = moviesData.filter(movie => {
+                // Search filter
+                const matchesSearch = movie.title.toLowerCase().includes(searchQuery) ||
+                                      movie.synopsis.toLowerCase().includes(searchQuery) ||
+                                      movie.genre.toLowerCase().includes(searchQuery);
+
+                // Genre filter
+                const matchesGenre = (genreFilter === 'ALL') || (movie.genre === genreFilter);
+
+                // Era filter
+                let matchesEra = true;
+                if (eraFilter === '90s') matchesEra = movie.year >= 1990 && movie.year <= 1999;
+                if (eraFilter === '2000s') matchesEra = movie.year >= 2000 && movie.year <= 2009;
+                if (eraFilter === '2010s') matchesEra = movie.year >= 2010 && movie.year <= 2013;
+
+                return matchesSearch && matchesGenre && matchesEra;
+            });
+
+            // Sorting
+            filtered.sort((a, b) => {
+                if (sortBy === 'rating') return b.initialRating - a.initialRating;
+                if (sortBy === 'newest') return b.year - a.year;
+                if (sortBy === 'oldest') return a.year - b.year;
+                if (sortBy === 'title') return a.title.localeCompare(b.title);
+                return 0;
+            });
+
+            renderMovieGrid(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('filter-genre').value = 'ALL';
+            document.getElementById('filter-era').value = 'ALL';
+            document.getElementById('sort-by').value = 'rating';
+            applyFilters();
+        }
+
+        /* ==========================================================================
+           5. INTERACTIVE MODAL & COMMENT SUBMISSION
+           ========================================================================== */
+        function openMovieModal(movieId) {
+            selectedMovieForModal = moviesData.find(m => m.id === movieId);
+            if (!selectedMovieForModal) return;
+
+            selectedStarRatingForm = 5; // Reset star form to 5
+            playBeepSound(600);
+
+            const modal = document.getElementById('review-modal');
+            const content = document.getElementById('modal-content');
+
+            const movieReviews = reviewsData[movieId] || [];
+
+            content.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-4 mb-6 pb-4 border-b border-pink-500">
+                    <div class="w-32 h-48 bg-purple-900 rounded-lg overflow-hidden border-2 border-cyan-400 flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center">
+                        <img src="${selectedMovieForModal.poster}" alt="${selectedMovieForModal.title}" class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-5xl\'>${selectedMovieForModal.svgFallback}</div>';">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h2 class="text-2xl font-bold text-pink-300 glow-pink">${selectedMovieForModal.title}</h2>
+                        <p class="text-xs text-cyan-300 y2k-font-digital mb-2">Año: ${selectedMovieForModal.year} | Director: ${selectedMovieForModal.director} | Género: ${selectedMovieForModal.genre}</p>
+                        <p class="text-xs text-gray-200 mb-3">${selectedMovieForModal.synopsis}</p>
+                        
+                        <div class="bg-black/60 p-3 rounded-lg border border-pink-400/50 flex flex-wrap justify-between items-center gap-2">
+                            <div>
+                                <span class="text-xs text-gray-300 block">Promedio Actual:</span>
+                                <div class="flex items-center gap-1 text-yellow-300 text-lg">
+                                    ${renderStars(selectedMovieForModal.initialRating)}
+                                    <span class="font-bold text-white text-base ml-1">${selectedMovieForModal.initialRating.toFixed(1)}</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-cyan-300 block y2k-font-digital">Total Votos</span>
+                                <span class="text-lg font-bold text-pink-400 y2k-font-digital">${selectedMovieForModal.votesCount}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADD REVIEW FORM -->
+                <div class="bg-purple-900/60 p-4 rounded-xl border-2 border-cyan-400 mb-6">
+                    <h3 class="text-sm font-bold text-yellow-300 mb-3 flex items-center gap-1">
+                        ✍️ ¡DEJA TU PUNTUACIÓN Y RESEÑA!
+                    </h3>
+
+                    <form onsubmit="submitReview(event, '${selectedMovieForModal.id}')" class="space-y-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <!-- User Name -->
+                            <div>
+                                <label class="block text-xs text-cyan-200 mb-1">Tu Nombre / Nickname Retro:</label>
+                                <input type="text" id="review-user" required placeholder="Ej: FanDeShrek_2003" 
+                                       class="w-full y2k-input px-3 py-1.5 rounded text-xs">
+                            </div>
+
+                            <!-- Sentiment Selector -->
+                            <div>
+                                <label class="block text-xs text-cyan-200 mb-1">Opinión General:</label>
+                                <select id="review-sentiment" class="w-full y2k-input px-3 py-1.5 rounded text-xs bg-purple-950">
+                                    <option value="Positivo 👍">Positivo 👍 (¡Me Encantó!)</option>
+                                    <option value="Negativo 👎">Negativo 👎 (No me gustó)</option>
+                                    <option value="Mix 💖">Mix 💖 (Nostálgico / Regular)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Star Selector -->
+                        <div>
+                            <label class="block text-xs text-cyan-200 mb-1">Tu Puntuación (1 a 5 Estrellas):</label>
+                            <div id="star-selector" class="star-rating text-2xl text-yellow-400 flex gap-1">
+                                <span onclick="setFormStars(1)">★</span>
+                                <span onclick="setFormStars(2)">★</span>
+                                <span onclick="setFormStars(3)">★</span>
+                                <span onclick="setFormStars(4)">★</span>
+                                <span onclick="setFormStars(5)">★</span>
+                            </div>
+                        </div>
+
+                        <!-- Comment Text Area -->
+                        <div>
+                            <label class="block text-xs text-cyan-200 mb-1">Tu Reseña o Comentario:</label>
+                            <textarea id="review-text" required rows="3" placeholder="Escribe tu opinión sobre la película..."
+                                      class="w-full y2k-input px-3 py-2 rounded text-xs"></textarea>
+                        </div>
+
+                        <button type="submit" class="y2k-btn px-4 py-2 text-xs rounded w-full font-bold tracking-wider">
+                            🚀 PUBLICAR COMENTARIO Y ACTUALIZAR RATINGS
+                        </button>
+                    </form>
+                </div>
+
+                <!-- EXISTING COMMENTS LIST -->
+                <div>
+                    <h3 class="text-sm font-bold text-pink-300 mb-3 flex items-center gap-2">
+                        <span>💬</span> COMENTARIOS DE LA COMUNIDAD (${movieReviews.length})
+                    </h3>
+
+                    <div id="comments-list" class="space-y-3 max-h-60 overflow-y-auto pr-1">
+                        ${movieReviews.length === 0 ? `
+                            <p class="text-xs text-gray-400 italic text-center py-4">Aún no hay comentarios. ¡Sé el primero en opinar!</p>
+                        ` : movieReviews.map(r => `
+                            <div class="bg-black/50 p-3 rounded-lg border border-purple-800 relative">
+                                <div class="flex justify-between items-start mb-1">
+                                    <span class="text-xs font-bold text-cyan-300">👤 ${r.user}</span>
+                                    <span class="text-[10px] text-gray-400 y2k-font-digital">${r.date}</span>
+                                </div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="text-xs text-yellow-300">${renderStars(r.rating)}</div>
+                                    <span class="text-[10px] px-2 py-0.5 rounded ${getBadgeStyle(r.sentiment)}">
+                                        ${r.sentiment}
+                                    </span>
+                                </div>
+                                <p class="text-xs text-purple-100">${r.text}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            updateStarSelectorVisuals();
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('review-modal').classList.add('hidden');
+            selectedMovieForModal = null;
+        }
+
+        function setFormStars(val) {
+            selectedStarRatingForm = val;
+            updateStarSelectorVisuals();
+            playBeepSound(700 + val * 50);
+        }
+
+        function updateStarSelectorVisuals() {
+            const container = document.getElementById('star-selector');
+            if (!container) return;
+            const stars = container.querySelectorAll('span');
+            stars.forEach((star, index) => {
+                if (index < selectedStarRatingForm) {
+                    star.innerText = '★';
+                    star.classList.add('text-yellow-400');
+                    star.classList.remove('text-gray-600');
+                } else {
+                    star.innerText = '☆';
+                    star.classList.remove('text-yellow-400');
+                    star.classList.add('text-gray-600');
+                }
+            });
+        }
+
+        function getBadgeStyle(sentiment) {
+            if (sentiment && sentiment.includes('Positivo')) return 'badge-sentiment-pos';
+            if (sentiment && sentiment.includes('Negativo')) return 'badge-sentiment-neg';
+            return 'badge-sentiment-mix';
+        }
+
+        // Submit Comment & Recalculate Rating
+        function submitReview(event, movieId) {
+            event.preventDefault();
+            const user = document.getElementById('review-user').value.trim();
+            const sentiment = document.getElementById('review-sentiment').value;
+            const text = document.getElementById('review-text').value.trim();
+
+            if (!user || !text) return;
+
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('es-ES');
+
+            const newReview = {
+                id: 'r_' + Date.now(),
+                user: user,
+                rating: selectedStarRatingForm,
+                sentiment: sentiment,
+                text: text,
+                date: dateStr
+            };
+
+            // Save to reviews list
+            if (!reviewsData[movieId]) reviewsData[movieId] = [];
+            reviewsData[movieId].unshift(newReview);
+            saveReviewsToStorage();
+
+            // Update Movie Rating & Vote Count
+            const movie = moviesData.find(m => m.id === movieId);
+            if (movie) {
+                const totalVotes = movie.votesCount + 1;
+                const newAvg = ((movie.initialRating * movie.votesCount) + selectedStarRatingForm) / totalVotes;
+                movie.votesCount = totalVotes;
+                movie.initialRating = Math.round(newAvg * 10) / 10;
+                saveMoviesToStorage();
+            }
+
+            playBeepSound(900);
+
+            // Re-render modal & catalog
+            openMovieModal(movieId);
+            renderAll();
+        }
+
+        /* ==========================================================================
+           6. RETRO SOUND EFFECTS & SPARKLE CURSOR
+           ========================================================================== */
+        let audioCtx = null;
+        let soundEnabled = false;
+
+        function toggleRetroSound() {
+            soundEnabled = !soundEnabled;
+            const statusLabel = document.getElementById('sound-status');
+            const iconLabel = document.getElementById('sound-icon');
+
+            if (soundEnabled) {
+                statusLabel.innerText = "ON";
+                iconLabel.innerText = "🔊";
+                playBeepSound(800);
+            } else {
+                statusLabel.innerText = "OFF";
+                iconLabel.innerText = "🎵";
+            }
+        }
+
+        function playBeepSound(freq = 440) {
+            if (!soundEnabled) return;
+            try {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.2);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.2);
+            } catch (e) {
+                // Audio context block fallback
+            }
+        }
+
+        // Sparkles Mouse Trail Effect
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.85) { // Control frequency
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkles = ['✨', '💖', '⭐', '🌸'];
+            const elem = document.createElement('div');
+            elem.className = 'sparkle-particle';
+            elem.innerText = sparkles[Math.floor(Math.random() * sparkles.length)];
+            elem.style.left = (x - 10) + 'px';
+            elem.style.top = (y - 10) + 'px';
+            elem.style.fontSize = (Math.random() * 12 + 10) + 'px';
+            document.body.appendChild(elem);
+
+            setTimeout(() => {
+                elem.remove();
+            }, 800);
+        }
+
+        /* ==========================================================================
+           7. APP INITIALIZATION
+           ========================================================================== */
+        window.onload = function() {
+            initData();
+            renderAll();
+        };
+    </script>
+</body>
+</html>
